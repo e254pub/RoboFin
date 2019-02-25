@@ -5,11 +5,9 @@ namespace app\commands;
 use app\models\LogTransactions;
 use app\models\User;
 use yii\console\Controller;
-use yii\console\ExitCode;
 
 class TransactController extends Controller {
     /**
-     * @return int
      * @throws \yii\db\Exception
      */
     public function actionIndex() {
@@ -39,10 +37,13 @@ class TransactController extends Controller {
                 
             }
         }
-        
-        return ExitCode::OK;
     }
     
+    /**
+     * @param $sumFromUser
+     * @param $sum
+     * @return bool
+     */
     private function consloleValidator($sumFromUser, $sum) {
         $checkSum = $sumFromUser - $sum;
         

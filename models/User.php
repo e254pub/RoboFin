@@ -87,7 +87,7 @@ class User extends ActiveRecord implements IdentityInterface {
      * @param $newSum
      * @throws \yii\db\Exception
      */
-    public function updateSumTransact($id, $newSum){
+    public function updateSumTransact($id, $newSum) {
         $params = [':id' => $id, ':newsum' => $newSum];
         Yii::$app->db->createCommand('UPDATE user SET sum = :newsum WHERE id=:id')
             ->bindValues($params)->execute();

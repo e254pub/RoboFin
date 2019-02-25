@@ -103,18 +103,4 @@ class LogTransactions extends \yii\db\ActiveRecord {
         Yii::$app->db->createCommand('UPDATE log_transactions SET transferred = true WHERE id=:id')
             ->bindParam(':id', $idTransact)->execute();
     }
-    
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    /*public function getFromUser() {
-        return $this->hasOne(User::className(), ['id' => 'from_user_id']);
-    }*/
-    
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    /*public function getToUser() {
-        return $this->hasOne(User::className(), ['id' => 'to_user_id']);
-    }*/
 }
