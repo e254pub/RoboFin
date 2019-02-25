@@ -1,44 +1,17 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
-    <br>
-</p>
+Идём в OpenServer/domains
+~~~
+git clone https://github.com/De4ault/RoboFin
+~~~
+~~~
+composer install
+~~~
+~~~
+yii migrate
+~~~
 
-Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-rapidly creating small projects.
-
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
-
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-basic.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-basic)
-
-DIRECTORY STRUCTURE
--------------------
-
-      assets/             contains assets definition
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      mail/               contains view files for e-mails
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      tests/              contains various tests for the basic application
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
-
-
-
-REQUIREMENTS
-------------
-
-The minimum requirement by this project template that your Web server supports PHP 5.4.0.
-
+Задача:  
+Используя любой PHP-фреймворк создать приложение, которое имеет следующие        возможности: любой пользователь приложения может выбрать любого другого пользователя         приложения (кроме себя), чтобы сделать отложенный перевод денежных средств со своего           счета на счет выбранного пользователя. При планировании такого перевода пользователь          указывает сумму перевода в рублях, дату и время, когда нужно произвести перевод. Сумма             перевода ограничена балансом клиента на момент планирования перевода с учетом ранее           запланированных и невыполненных его исходящих переводов. Дата и время выбирается с           точностью до часа с использованием календаря. Способ выбора пользователя - любой (можно            просто ввод ID). Ввод данных должен валидироваться как на стороне клиента, так и на стороне               сервера с выводом ошибок пользователю. Показать на сайте список всех пользователей и информацию об их одном последнем            переводе с помощью одного SQL-запроса к БД. Реализовать сам процесс выполнения запланированных переводов. Не допустить        ситуации, при которой у какого-либо пользователя окажется отрицательный баланс.   
+Написанный для решения задачи код не должен содержать уязвимостей. Процесс          регистрации и проверки прав доступа можно не реализовывать. Для этого допустимо добавить            дополнительное поле ввода для указания текущего пользователя. Внешний вид страниц          значения не имеет. 
 
 INSTALLATION
 ------------
