@@ -26,6 +26,7 @@ class m190224_053758_create_user_table extends Migration {
                 'status'               => $this->smallInteger()->notNull()->defaultValue(10),
                 'created_at'           => $this->integer()->notNull(),
                 'updated_at'           => $this->integer()->notNull(),
+                'sum'                  => $this->decimal(),
             ],
             $tableOptions
         );
