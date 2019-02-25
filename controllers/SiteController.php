@@ -110,6 +110,10 @@ class SiteController extends Controller {
      * @return bool
      */
     private function validator($usernameId, $sumTr, $data) {
+        if (empty($usernameId) || empty($sumTr) || empty($data)) {
+            echo "Заполните все поля";
+            return false;
+        }
         $userName       = Yii::$app->user->identity->username;
         $currentUser    = User::findByUsername($userName);
         $currentUserSum = $currentUser->sum;

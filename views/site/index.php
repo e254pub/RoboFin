@@ -29,13 +29,13 @@ $this->title = '';
         <table>
             <tr>
                 <td>
-                    <input placeholder="Кому перевести (usernameId)" name="nameId" class="form-control"/>
+                    <input placeholder="Кому перевести (userId)" name="nameId" class="form-control" required pattern="^[ 0-9]+$"/>
                     <br>
-                    <input placeholder="Сумма перевода" name="sum" class="form-control"/>
+                    <input placeholder="Сумма перевода" name="sum" class="form-control" required pattern="^[ 0-9]+$"/>
                 </td>
                 <td style="vertical-align: top;">
                     <div class='input-group date' id='datetimepicker1' style="width: 300px;">
-                        <input type='text' name="data" class="form-control"/>
+                        <input type='text' name="data" class="form-control" required />
                         <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
            </span>
@@ -44,7 +44,7 @@ $this->title = '';
             </tr>
         </table>
         <br>
-        <p><input type="submit"/></p>
+        <p><input type="submit" value="Отправить" formnovalidate/></p>
         <?php $form = yii\widgets\ActiveForm::end() ?>
         <?php if ($message): ?>
             <h2 style="color: red"><?= $message ?></h2>
