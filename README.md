@@ -1,6 +1,15 @@
-Идём в OpenServer/domains
+из-под OpenServer (юзается MySQL-8.0-x64; Nginx-1.14)
+~~~
+Через phpMyAdmin создать базу cash_db
+~~~
+~~~
+cd путь_до_domains
+~~~
 ~~~
 git clone https://github.com/De4ault/RoboFin
+~~~
+~~~
+cd в_папку_RoboFin
 ~~~
 ~~~
 composer install
