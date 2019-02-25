@@ -24,11 +24,11 @@ class TransactController extends Controller {
                 $idToUser   = $item['to_user_id'];
                 
                 $sumFromUser = $transactModel->getFromUser($idFromUser);
-                $sum         = $item['sum'];
+                $sum         = (int)$item['sum'];
                 
                 $valid = $this->consloleValidator($sumFromUser, $sum);
                 if ($valid == true) {
-                    $sumToUser = $transactModel->getToUser($idToUser);
+                    $sumToUser = (int)$transactModel->getToUser($idToUser);
                     $users->updateSumTransact($idFromUser, $sumFromUser - $sum);
                     $users->updateSumTransact($idToUser, $sumToUser + $sum);
                     

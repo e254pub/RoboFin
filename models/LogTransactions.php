@@ -13,7 +13,6 @@ use Yii;
  * @property int $to_user_id
  * @property string $sum
  * @property int $transferred
- * @property int $rollback
  *
  * @property User $fromUser
  * @property User $toUser
@@ -33,7 +32,7 @@ class LogTransactions extends \yii\db\ActiveRecord {
         return [
             [['data', 'from_user_id', 'to_user_id', 'sum'], 'required'],
             [['data'], 'safe'],
-            [['from_user_id', 'to_user_id', 'transferred', 'rollback'], 'integer'],
+            [['from_user_id', 'to_user_id', 'transferred'], 'integer'],
             [['sum'], 'number'],
             [['from_user_id'], 'exist', 'skipOnError'     => true, 'targetClass' => User::className(),
                                         'targetAttribute' => ['from_user_id' => 'id']],
@@ -53,7 +52,6 @@ class LogTransactions extends \yii\db\ActiveRecord {
             'to_user_id'   => 'To User ID',
             'sum'          => 'Sum',
             'transferred'  => 'Transferred',
-            'rollback'     => 'Rollback',
         ];
     }
     
@@ -82,7 +80,7 @@ class LogTransactions extends \yii\db\ActiveRecord {
      */
     public function getToUser($userToId) {
         return Yii::$app->db->createCommand('SELECT sum FROM user WHERE id=:id')
-            ->bindParam(':id', $userToId)->queryOne();
+            ->bindParam(':id', $userToId)->queryScalar();
     }
     
     /**
@@ -92,7 +90,7 @@ class LogTransactions extends \yii\db\ActiveRecord {
      */
     public function getFromUser($userFromId) {
         return Yii::$app->db->createCommand('SELECT sum FROM user WHERE id=:id')
-            ->bindParam(':id', $userFromId)->queryOne();
+            ->bindParam(':id', $userFromId)->queryScalar();
     }
     
     /**
