@@ -3,7 +3,7 @@
 git clone https://github.com/De4ault/RoboFin
 ~~~
 ~~~
-composer insall
+composer install
 ~~~
 ~~~
 yii migrate
