@@ -1,4 +1,5 @@
 из-под OpenServer (юзается MySQL-8.0-x64; Nginx-1.14)
+Доработать: Планировщик задач, запускать commands/TransactController.php каждую минуту
 ~~~
 Через phpMyAdmin создать базу cash_db
 ~~~
