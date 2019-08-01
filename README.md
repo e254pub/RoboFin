@@ -1,6 +1,7 @@
 (юзается MySQL-8.0-x64; Nginx-1.14)
 Через ubuntu разворачивается аналогично, после установки стека также юзаем composer, через уонсоль mysql - create database cash_db; далее php yii migrate
 В crontab кидается */1 * * * * php /var/www/RoboFin/commands transact/index
+~~~
 из-под OpenServer:
 ~~~
 Через phpMyAdmin создать базу cash_db
