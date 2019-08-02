@@ -1,5 +1,9 @@
-(юзается MySQL-8.0-x64; Apache_2.4-PHP_7.2-7.3-x64; PHP_7.3-x64)
+(юзается MySQL-8.0-x64; Apache_2.4-PHP_7.2-7.3-x64; PHP_7.3-x64) - в OpenServer это вкладка модули
+
+
 OpenServer (https://ospanel.io/download/ или https://rutracker.org/forum/viewtopic.php?t=5702312)
+
+
 1. из-под OpenServer:
 2. Через phpMyAdmin создать базу cash_db
 3. cd путь_до_domains
