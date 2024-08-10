@@ -1,27 +1,16 @@
-(юзается MySQL-8.0-x64; Apache_2.4-PHP_7.2-7.3-x64; PHP_7.3-x64) - в OpenServer это вкладка модули
-
-
-OpenServer (https://ospanel.io/download/ или https://rutracker.org/forum/viewtopic.php?t=5702312)
-
-
-1. из-под OpenServer:
-2. Через phpMyAdmin создать базу cash_db
-3. cd путь_до_domains
-4. git clone https://github.com/De4ault/RoboFin
-5. cd в_папку_RoboFin
-6. composer install
-7. yii migrate
-8. В настройки openServer, вкладка планировщик заданий кидается cd D:\OSPanel\domains\RoboFin && php yii transact
-где D:\OSPanel\domains\RoboFin полный путь до проекта
+(юзается MySQL-8.0; Apache_2.4; PHP_7.3)
 ~~~
+
+1. создать базу cash_db
+2. cd путь_до_domains
+3. git clone https://github.com/De4ault/RoboFin
+4. cd в_папку_RoboFin
+5. composer install
+6. yii migrate
+7. php yii transact
+
 ~~~
-Через ubuntu разворачивается аналогично, после установки стека также юзаем composer, через консоль mysql - create database cash_db; далее php yii migrate
-
-
 В crontab кидается */1 * * * * cd /var/www/RoboFin && php yii transact
-
-
-Однако лучше через OpenServer
 
 
 Задача:  
